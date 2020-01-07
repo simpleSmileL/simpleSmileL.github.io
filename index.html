@@ -61,6 +61,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Android_edittext显示隐藏" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/" class="article-date">
+  <time datetime="2020-01-07T00:55:18.684Z" itemprop="datePublished">2020-01-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/">Android_edittext显示隐藏</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Android-edittext-监听隐藏还是显示"><a href="#Android-edittext-监听隐藏还是显示" class="headerlink" title="Android edittext 监听隐藏还是显示"></a>Android edittext 监听隐藏还是显示</h3><hr>
+<p>找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！</p>
+<p>、、、</p>
+<p>et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {<br>            @Override<br>            public void onGlobalLayout() {<br>                Rect r = new Rect();<br>                et_used_time.getWindowVisibleDisplayFrame(r);<br>                int screenHeight = et_used_time.getRootView().getHeight();<br>                int heightDifference = screenHeight - (r.bottom);<br>                if (heightDifference &gt; 200) {<br>                    //软键盘显示<br>                    MyLog.e(“TAG”, “mIsSoftKeyboardShowing 显示”);<br>                } else {<br>                    //软键盘隐藏<br>                    MyLog.e(“TAG”, “ mIsSoftKeyboardShowing 隐藏”);</p>
+<pre><code>            }
+        }
+    }
+});</code></pre><p>、、、</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/" data-id="ck537tyek0001ewq3b06k1n0z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-markdown语法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/31/markdown%E8%AF%AD%E6%B3%95/" class="article-date">
@@ -104,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/31/markdown%E8%AF%AD%E6%B3%95/" data-id="ck2efqk4t00038cq3an162mxi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/31/markdown%E8%AF%AD%E6%B3%95/" data-id="ck537tyfm0004ewq3buhd96tq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/29/midouzi/" data-id="ck2efqk4s00028cq39zz7d8ro" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/29/midouzi/" data-id="ck537tyeo0002ewq38yd40z0o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/28/firstpost/" data-id="ck2efqk4m00008cq3893q7a0q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/28/firstpost/" data-id="ck537tye80000ewq3efb32uxz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -228,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/26/hello-world/" data-id="ck2efqk4r00018cq3gaapdb4s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/26/hello-world/" data-id="ck537tyfk0003ewq34lsv1ms8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,7 +300,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
     </div>
   </div>
 
@@ -267,6 +311,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/">Android_edittext显示隐藏</a>
+          </li>
         
           <li>
             <a href="/2019/10/31/markdown%E8%AF%AD%E6%B3%95/">markdown语法</a>
@@ -296,7 +344,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 simpleSmile<br>
+      &copy; 2020 simpleSmile<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
