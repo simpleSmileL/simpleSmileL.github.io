@@ -7,14 +7,14 @@
   
   <title>Android_edittext显示隐藏 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android edittext 监听隐藏还是显示 找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！ 、、、 et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {            @Override">
+  <meta name="description" content="Android edittext 监听隐藏还是显示 找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！ ` et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()      {         @Override">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android_edittext显示隐藏">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;07&#x2F;Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Android edittext 监听隐藏还是显示 找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！ 、、、 et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {            @Override">
+<meta property="og:description" content="Android edittext 监听隐藏还是显示 找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！ ` et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()      {         @Override">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-07T00:55:18.766Z">
+<meta property="og:updated_time" content="2020-01-07T01:58:50.476Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -86,17 +86,32 @@
       
         <h3 id="Android-edittext-监听隐藏还是显示"><a href="#Android-edittext-监听隐藏还是显示" class="headerlink" title="Android edittext 监听隐藏还是显示"></a>Android edittext 监听隐藏还是显示</h3><hr>
 <p>找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！</p>
-<p>、、、</p>
-<p>et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {<br>            @Override<br>            public void onGlobalLayout() {<br>                Rect r = new Rect();<br>                et_used_time.getWindowVisibleDisplayFrame(r);<br>                int screenHeight = et_used_time.getRootView().getHeight();<br>                int heightDifference = screenHeight - (r.bottom);<br>                if (heightDifference &gt; 200) {<br>                    //软键盘显示<br>                    MyLog.e(“TAG”, “mIsSoftKeyboardShowing 显示”);<br>                } else {<br>                    //软键盘隐藏<br>                    MyLog.e(“TAG”, “ mIsSoftKeyboardShowing 隐藏”);</p>
-<pre><code>            }
-        }
-    }
-});</code></pre><p>、、、</p>
+<pre><code>`
+et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() 
+    {
+        @Override
+        public void onGlobalLayout() {
+            Rect r = new Rect();
+            et_used_time.getWindowVisibleDisplayFrame(r);
+            int screenHeight = et_used_time.getRootView().getHeight();
+            int heightDifference = screenHeight - (r.bottom);
+            if (heightDifference &gt; 200) {
+                //软键盘显示
+                MyLog.e(&quot;TAG&quot;, &quot;mIsSoftKeyboardShowing 显示&quot;);
+            } else {
+                //软键盘隐藏
+                MyLog.e(&quot;TAG&quot;, &quot; mIsSoftKeyboardShowing 隐藏&quot;);
 
+                }
+            }
+        }
+    });
+
+`</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/" data-id="ck537tyek0001ewq3b06k1n0z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/" data-id="ck5387wcw0000d8q308zi7qqr" class="article-share-link">Share</a>
       
       
     </footer>
