@@ -7,14 +7,14 @@
   
   <title>上架360应用市场 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="360应用市场上架APP警示您的应用签名算法采用“SHA256withRSA”，在部分4.2一下安卓版本的手机上不能安装的解决方案  解决方法： 在cmd进入jdk的bin目录，然后执行以下命令： 、、 jarsgner -verbose **-sigalg SHA1withRSA -digestalg SHA1** -keystore [keystorePath] -singnedjar [ap">
+  <meta name="description" content="360应用市场上架APP警示您的应用签名算法采用“SHA256withRSA”，在部分4.2一下安卓版本的手机上不能安装的解决方案  解决方法： 在cmd进入jdk的bin目录，然后执行以下命令： 、 jarsgner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore [keystorePath] -singnedjar [apkOut.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="上架360应用市场">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;09&#x2F;%E4%B8%8A%E6%9E%B6360%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="360应用市场上架APP警示您的应用签名算法采用“SHA256withRSA”，在部分4.2一下安卓版本的手机上不能安装的解决方案  解决方法： 在cmd进入jdk的bin目录，然后执行以下命令： 、、 jarsgner -verbose **-sigalg SHA1withRSA -digestalg SHA1** -keystore [keystorePath] -singnedjar [ap">
+<meta property="og:description" content="360应用市场上架APP警示您的应用签名算法采用“SHA256withRSA”，在部分4.2一下安卓版本的手机上不能安装的解决方案  解决方法： 在cmd进入jdk的bin目录，然后执行以下命令： 、 jarsgner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore [keystorePath] -singnedjar [apkOut.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-09T07:11:52.797Z">
+<meta property="og:updated_time" content="2020-01-09T07:19:12.691Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -88,18 +88,20 @@
 <hr>
 <p>解决方法：</p>
 <p>在cmd进入jdk的bin目录，然后执行以下命令：</p>
-<pre><code>、、 jarsgner -verbose **-sigalg SHA1withRSA -digestalg SHA1** -keystore [keystorePath] -singnedjar [apkOut.apk] [apkln.apk] [alias]</code></pre><p>keystorePath：签名文件的绝对路径</p>
+<pre><code>、
+jarsgner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore [keystorePath] -singnedjar [apkOut.apk] [apkln.apk] [alias]
+、 </code></pre><p>keystorePath：签名文件的绝对路径</p>
 <p>apkOut：签名之后的存放的位置</p>
 <p>apkln.apk：签名前的apk绝对路径</p>
 <p>alias：签名文件的别名</p>
 <p>输入密码，然后可以找到您签名的apk。</p>
 <p>##</p>
-<p>加固apk（注：如使用360加固助手，请先取消自动自动签名功能）</p>
+<p>加固apk（注：如使用360加固助手，请先取消自动签名功能）</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/09/%E4%B8%8A%E6%9E%B6360%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA/" data-id="ck56e9b4a00033wq3d0kh027n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/01/09/%E4%B8%8A%E6%9E%B6360%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA/" data-id="ck56eiewp00053cq3fql47gwc" class="article-share-link">Share</a>
       
       
     </footer>
