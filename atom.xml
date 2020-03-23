@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-01-09T07:19:12.691Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>simpleSmile</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>上架360应用市场</title>
+    <link href="http://yoursite.com/2020/01/09/%E4%B8%8A%E6%9E%B6360%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA/"/>
+    <id>http://yoursite.com/2020/01/09/%E4%B8%8A%E6%9E%B6360%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA/</id>
+    <published>2020-01-09T07:11:52.672Z</published>
+    <updated>2020-01-09T07:19:12.691Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="360应用市场上架APP警示"><a href="#360应用市场上架APP警示" class="headerlink" title="360应用市场上架APP警示"></a>360应用市场上架APP警示</h3><p>您的应用签名算法采用“SHA256withRSA”，在部分4.2一下安卓版本的手机上不能安装的解决方案</p><hr><p>解决方法：</p><p>在cmd进入jdk的bin目录，然后执行以下命令：</p><pre><code>、jarsgner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore [keystorePath] -singnedjar [apkOut.apk] [apkln.apk] [alias]、 </code></pre><p>keystorePath：签名文件的绝对路径</p><p>apkOut：签名之后的存放的位置</p><p>apkln.apk：签名前的apk绝对路径</p><p>alias：签名文件的别名</p><p>输入密码，然后可以找到您签名的apk。</p><p>##</p><p>加固apk（注：如使用360加固助手，请先取消自动签名功能）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;360应用市场上架APP警示&quot;&gt;&lt;a href=&quot;#360应用市场上架APP警示&quot; class=&quot;headerlink&quot; title=&quot;360应用市场上架APP警示&quot;&gt;&lt;/a&gt;360应用市场上架APP警示&lt;/h3&gt;&lt;p&gt;您的应用签名算法采用“SHA256withR
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android_edittext显示隐藏</title>
+    <link href="http://yoursite.com/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/"/>
+    <id>http://yoursite.com/2020/01/07/Android_edittext%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F/</id>
+    <published>2020-01-07T00:55:18.684Z</published>
+    <updated>2020-01-07T01:58:50.476Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Android-edittext-监听隐藏还是显示"><a href="#Android-edittext-监听隐藏还是显示" class="headerlink" title="Android edittext 监听隐藏还是显示"></a>Android edittext 监听隐藏还是显示</h3><hr><p>找了很多资料，直接上代码，这个方法直接解决了我的问题，记录一下！</p><pre><code>`et_used_time.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()     {        @Override        public void onGlobalLayout() {            Rect r = new Rect();            et_used_time.getWindowVisibleDisplayFrame(r);            int screenHeight = et_used_time.getRootView().getHeight();            int heightDifference = screenHeight - (r.bottom);            if (heightDifference &gt; 200) {                //软键盘显示                MyLog.e(&quot;TAG&quot;, &quot;mIsSoftKeyboardShowing 显示&quot;);            } else {                //软键盘隐藏                MyLog.e(&quot;TAG&quot;, &quot; mIsSoftKeyboardShowing 隐藏&quot;);                }            }        }    });`</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Android-edittext-监听隐藏还是显示&quot;&gt;&lt;a href=&quot;#Android-edittext-监听隐藏还是显示&quot; class=&quot;headerlink&quot; title=&quot;Android edittext 监听隐藏还是显示&quot;&gt;&lt;/a&gt;Android edi
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法</title>
+    <link href="http://yoursite.com/2019/10/31/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/10/31/markdown%E8%AF%AD%E6%B3%95/</id>
+    <published>2019-10-31T06:31:11.063Z</published>
+    <updated>2019-10-31T08:13:56.554Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="markdown语法"><a href="#markdown语法" class="headerlink" title="markdown语法"></a>markdown语法</h1><hr><h1 id="一个-是一级标题"><a href="#一个-是一级标题" class="headerlink" title="一个#是一级标题"></a>一个#是一级标题</h1><h2 id="两个-是二级标题"><a href="#两个-是二级标题" class="headerlink" title="两个##是二级标题"></a>两个##是二级标题</h2><h3 id="三个-是三级标题"><a href="#三个-是三级标题" class="headerlink" title="三个###是三级标题"></a>三个###是三级标题</h3><h4 id="四个-是四级标题"><a href="#四个-是四级标题" class="headerlink" title="四个####是四级标题"></a>四个####是四级标题</h4><h5 id="五个-是四级标题"><a href="#五个-是四级标题" class="headerlink" title="五个#####是四级标题"></a>五个#####是四级标题</h5><hr><p><strong>字体加粗两边用两个星号包起来</strong></p><p><em>倾斜字体两边用一个包起来</em></p><p><strong><em>倾斜加粗的文字</em></strong></p><p><del>删除线用两个波浪线包起来</del></p><hr><p>添加图片的语法：!【】（图片地址） 符号都要是英文转态下的</p><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572513920862&di=59c46175c10bd20e022ad16e864df953&imgtype=0&src=http%3A%2F%2Fdingyue.ws.126.net%2F2019%2F07%2F15%2F3ef5cb44255c4d0f8b6b90cbba07324a.jpeg" alt="祢豆子" title="这就是祢豆子啊"></p><p>添加超链接的语法：【】（网页地址）</p><p><a href="https://simplesmilel.github.io/" target="_blank" rel="noopener">虾饺的博客</a></p><p><code>this is 单行代码</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">  echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure><p><img src="https://github.com/simpleSmileL/Dress/blob/master/8023/190707-%E8%85%BF%E5%AD%90.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h1 id=&quot;markdown语法&quot;&gt;&lt;a href=&quot;#markdown语法&quot; class=&quot;headerlink&quot; title=&quot;markdown语法&quot;&gt;&lt;/a&gt;markdown语法&lt;/h1&gt;&lt;hr&gt;
+&lt;h1 id=&quot;一个-是一级标题&quot;&gt;&lt;a href=&quot;#一个-
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>midouzi</title>
+    <link href="http://yoursite.com/2019/10/29/midouzi/"/>
+    <id>http://yoursite.com/2019/10/29/midouzi/</id>
+    <published>2019-10-29T08:12:37.898Z</published>
+    <updated>2019-10-31T06:11:18.441Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="今天也要加油鸭！"><a href="#今天也要加油鸭！" class="headerlink" title="今天也要加油鸭！"></a>今天也要加油鸭！</h2><h1 id="祢豆子"><a href="#祢豆子" class="headerlink" title="祢豆子"></a>祢豆子</h1><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572346549346&di=c967e155cd6a7844ab8779e235176df1&imgtype=0&src=http%3A%2F%2Fpics0.baidu.com%2Ffeed%2F024f78f0f736afc33dfd811d15de68c1b6451225.jpeg%3Ftoken%3Dfd9783f41111146d1c6f8864eeed11d0%26s%3DA5D12366CC403157406CA49003001093" alt=""></p><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572346687880&di=5648ec9cccaec7dabebae55685647284&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F75287b27e2cac6bef874ddc5cfaf8570af02b374.jpg" alt=""></p><h3 id="牛鬼蛇神全走开"><a href="#牛鬼蛇神全走开" class="headerlink" title="牛鬼蛇神全走开"></a>牛鬼蛇神全走开</h3><pre><code class="prinln(Hello"></code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;今天也要加油鸭！&quot;&gt;&lt;a href=&quot;#今天也要加油鸭！&quot; class=&quot;headerlink&quot; title=&quot;今天也要加油鸭！&quot;&gt;&lt;/a&gt;今天也要加油鸭！&lt;/h2&gt;&lt;h1 id=&quot;祢豆子&quot;&gt;&lt;a href=&quot;#祢豆子&quot; class=&quot;headerlink&quot; ti
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>firstpost</title>
+    <link href="http://yoursite.com/2019/10/28/firstpost/"/>
+    <id>http://yoursite.com/2019/10/28/firstpost/</id>
+    <published>2019-10-28T06:33:31.155Z</published>
+    <updated>2020-01-07T03:48:25.122Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h2 id="更新网站内容的操作步骤："><a href="#更新网站内容的操作步骤：" class="headerlink" title="更新网站内容的操作步骤："></a>更新网站内容的操作步骤：</h2><ol><li>cd 到Hexo的source下的_posts文件下 Git Bash hear</li><li>执行命令 hexo generate</li><li>执行命令 hexo deploy</li><li>更新完毕</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h2 id=&quot;更新网站内容的操作步骤：&quot;&gt;&lt;a href=&quot;#更新网站内容的操作步骤：&quot; class=&quot;headerlink&quot; title=&quot;更新网站内容的操作步骤：&quot;&gt;&lt;/a&gt;更新网站内容的操作步骤：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;cd 到Hexo的source下的_p
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World ,this is gb first blog</title>
+    <link href="http://yoursite.com/2019/10/26/hello-world/"/>
+    <id>http://yoursite.com/2019/10/26/hello-world/</id>
+    <published>2019-10-26T02:25:42.532Z</published>
+    <updated>2019-10-28T06:06:35.358Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
